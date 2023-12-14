@@ -1,0 +1,32 @@
+########################################################################
+# A simple configuration for the Hightech Biz web space.
+<IfModule mod_ssl.c>
+	<VirtualHost www.hightechbiz.de:443>
+	ServerAdmin webmaster@hightechbiz.de
+	DocumentRoot /var/www/hightechbiz
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+# Enable/Disable SSL for this virtual host.
+
+	SSLEngine on
+
+# Configure the server's certificate and private key
+	SSLCertificateFile /etc/apache2/ssl/certs/server.crt
+	SSLCertificateKeyFile /etc/apache2/ssl/private/server.key
+
+# Server Certificate Chain:
+	SSLCertificateChainFile /etc/apache2/ssl/certs/htb-ca-chain.crt
+
+# Config for cgi scripts (not needed in this exercise)
+	<FilesMatch "\.(cgi|shtml|phtml|php)$">
+		SSLOptions +StdEnvVars
+	</FilesMatch>
+	<Directory /usr/lib/cgi-bin>
+		SSLOptions +StdEnvVars
+	</Directory>
+
+	</VirtualHost>
+</IfModule>
+########################################################################

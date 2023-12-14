@@ -1,0 +1,12 @@
+<HTML>
+	<HEAD>
+		<TITLE>Hightech Biz Homepage</TITLE>
+	</HEAD>
+
+	<BODY BGCOLOR="FFFFFF">
+	<HR>
+		<H1>This is the webpage of the Hightech Biz Start Up.</H1>
+		<H2>More details follow shortly.</H2>
+	<HR>
+	</BODY>
+</HTML>
