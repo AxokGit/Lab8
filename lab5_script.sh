@@ -1,8 +1,22 @@
 #!/bin/bash
 
-adduser iotlab --gecos "IoTLab,,," --disabled-password
+echo ""
+echo "Welcome to the pre-requirements lab5 script"
+echo "This script is about to run all the necessary commands of lab5 for starting the lab8"
+read -p "Do you want to proceed? (yes/no) " yn
+
+case $yn in 
+	yes ) echo ok, we will proceed;;
+	no ) echo exiting...;
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac
+
+
+adduser iotlab --gecos "IoTLab,,," --disabled-password > /dev/null 2>&1
 echo "iotlab:iotlab2022" | chpasswd
-apt update  > /dev/null 2>&1 && apt -y upgrade  > /dev/null 2>&1
+apt update  > /dev/null 2>&1 && apt -y upgrade > /dev/null 2>&1
 apt install sudo > /dev/null 2>&1
 usermod -aG sudo iotlab
 sudo apt -y install vim nano openssl apache2 curl wget > /dev/null 2>&1
