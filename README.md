@@ -2,7 +2,7 @@
 
 Commands:
 ```
-apt update && apt -y upgrade && apt install -y wget
+apt update && apt install -y wget
 wget https://raw.githubusercontent.com/AxokGit/Lab8/main/lab5_script.sh
 sh lab5_script.sh
 cd /home/iotlab/PKI
