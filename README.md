@@ -1,0 +1,1 @@
+wget https://raw.githubusercontent.com/AxokGit/Lab8/main/lab5_script.sh
